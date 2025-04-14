@@ -131,7 +131,7 @@
 	</dependencies>
 	<properties>
 		<docker.image.prefix>springio</docker.image.prefix>
-		<java.version>8</java.version>
+		<java.version>11</java.version>
 		<querydsl.version>4.1.4</querydsl.version>
 	</properties>
 </project>
