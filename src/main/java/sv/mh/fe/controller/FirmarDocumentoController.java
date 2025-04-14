@@ -43,7 +43,7 @@ public class FirmarDocumentoController extends Controller {
 	 * @return
 	 * @throws Exception
 	 */
-	@RequestMapping(value = "/", method = RequestMethod.POST)
+	@PostMapping // Este método maneja las solicitudes POST a /firmardocumento	
 	public ResponseEntity<?> firmar(@Valid @RequestBody FirmarDocumentoFilter filter) {
 		CertificadoMH certificado = null;		
 		try {			
@@ -88,5 +88,10 @@ public class FirmarDocumentoController extends Controller {
 	@GetMapping("/status")
 	public String getStatus(){
 		return "Application is running...!!";
+	}
+
+	@GetMapping("/mensajes")
+	public String getMensajes(){
+		return "Prueba de mensaje";
 	}
 }
