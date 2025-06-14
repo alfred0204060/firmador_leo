@@ -4,5 +4,6 @@ public class Constantes {
 
 	
 	//public static final String DIRECTORY_UPLOADS = System.getProperty("user.dir")+"/uploads";	
-	public static final String DIRECTORY_UPLOADS = "uploads";
+public static final String DIRECTORY_UPLOADS = "/site/wwwroot/uploads";
+
 }
