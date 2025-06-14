@@ -94,4 +94,9 @@ public class FirmarDocumentoController extends Controller {
 	public String getMensajes(){
 		return "Prueba de mensaje";
 	}
+
+	@GetMapping("/prueba")
+	public String getPrueba(){
+		return "aplicacion compilada correctamente";
+	}
 }
