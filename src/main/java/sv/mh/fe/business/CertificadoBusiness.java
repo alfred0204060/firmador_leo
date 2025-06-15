@@ -1,6 +1,7 @@
 package sv.mh.fe.business;
 
 import java.io.IOException;
+import java.net.URISyntaxException;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.security.NoSuchAlgorithmException;
@@ -9,6 +10,7 @@ import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.io.ClassPathResource;
 import org.springframework.stereotype.Service;
 import com.fasterxml.jackson.dataformat.xml.XmlMapper;
 import sv.mh.fe.constantes.Constantes;
@@ -28,7 +30,7 @@ public class CertificadoBusiness {
 	
 	private static Logger logger = LoggerFactory.getLogger(CertificadoBusiness.class);		
 	
-	public CertificadoMH recuperarCertifiado(FirmarDocumentoFilter filter) throws IOException, NoSuchAlgorithmException {		
+	public CertificadoMH recuperarCertifiado(FirmarDocumentoFilter filter) throws IOException, NoSuchAlgorithmException, URISyntaxException {		
 		XmlMapper xmlMapper = new XmlMapper();
 		JavaTimeModule module = new JavaTimeModule();
 		xmlMapper.registerModule(module);
@@ -39,8 +41,17 @@ public class CertificadoBusiness {
 		//Path path = Paths.get(Constantes.DIRECTORY_UPLOADS,filter.getNit()+".crt");
 		//Path path = Paths.get(Constantes.DIRECTORY_UPLOADS,filter.getNit()+".crt");
 		
-		String nombreArchivo = "06140912201056.crt"; // Nombre específico del archivo
-        Path path = Paths.get("/uploads", nombreArchivo);
+		String nombreArchivo = "uploads/06140912201056.crt"; // Usa el NIT desde el filtro
+   		Path path;
+
+		try {
+				// Obtener la URL del recurso y convertirla a Path
+				path = Paths.get(new ClassPathResource(nombreArchivo).getURI());
+			} catch (NullPointerException e) {
+				logger.error("El archivo no se encontró: " + nombreArchivo, e);
+				return null; // Manejar el caso donde el archivo no existe
+			}
+
 
 		String contenido = fileUtilis.LeerArchivo(path);
 		certificado = xmlMapper.readValue(contenido, CertificadoMH.class);
