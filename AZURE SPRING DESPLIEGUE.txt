@@ -1,0 +1,137 @@
+URL PROYECTO LOCAL 
+C:\Proyectos\FirmadoresMH\firmador_leo
+
+
+URL AZURE
+https://firmadorapp01.azurewebsites.net/firma/firmardocumento
+
+URL AZURE LOCAL
+http://localhost:8113/firma/firmardocumento
+
+
+URL DOCKER LOCAL
+http://localhost:8113/firmardocumento/
+
+
+PETICION
+{
+    "nit": "06140912201056",
+    "activo": true,
+    "passwordPri":"F3l2025L3o",
+    "dteJson":
+            {
+            "identificacion": {
+                "version": 1,
+                "ambiente": "00",
+                "tipoDte": "01",
+                "numeroControl": "DTE-01-M001P001-000000000000002",
+                "codigoGeneracion": "C827917D-3959-4C9B-B494-D72B47C249C3",
+                "tipoModelo": 1,
+                "tipoOperacion": 1,
+                "tipoContingencia": null,
+                "motivoContin": null,
+                "fecEmi": "2025-04-13",
+                "horEmi": "17:21:00",
+                "tipoMoneda": "USD"
+            },
+            "emisor": {
+                "nit": "06140912201056",
+                "nrc": "2972620",
+                "nombre": "ACCESORIOS LEO, SOCIEDAD ANONIMA DE CAPITAL VARIABLE",
+                "codActividad": "46497",
+                "descActividad": "Venta de artículos deportivos, juguetes y rodados",
+                "nombreComercial": "ACCESORIOS LEO, SOCIEDAD ANONIMA DE CAPITAL VARIABLE",
+                "tipoEstablecimiento": "02",
+                "direccion": {
+                "departamento": "05",
+                "municipio": "28",
+                "complemento": "Calle chiltiupan, local 1, urb. jardines del volcan, #4, municipio de santa tecla, departamento de la libertad"
+                },
+                "telefono": "76776123",
+                "correo": "siguenzaalfred@gmail.com",
+                "codEstableMH": "S001",
+                "codEstable": null,
+                "codPuntoVentaMH": "P001",
+                "codPuntoVenta": null
+            },
+            "receptor": {
+                "tipoDocumento": null,
+                "numDocumento": null,
+                "nrc": null,
+                "nombre": "Jhony  Stanley Osorto",
+                "codActividad": null,
+                "descActividad": null,
+                "direccion": {
+                "departamento": "06",
+                "municipio": "23",
+                "complemento": "-"
+                },
+                "telefono": "76776123",
+                "correo": "siguenzaalfred@gmail.com"
+            },
+            "documentoRelacionado": null,
+            "ventaTercero": null,
+            "cuerpoDocumento": [
+                {
+                "numItem": 1,
+                "tipoItem": 2,
+                "numeroDocumento": null,
+                "cantidad": 1.0,
+                "codigo": "ZKG616",
+                "codTributo": null,
+                "uniMedida": 59,
+                "descripcion": "CANGURERA MARICONERA KHAKI",
+                "precioUni": 9.0,
+                "montoDescu": 0.0,
+                "ventaNoSuj": 0.0,
+                "ventaExenta": 0.0,
+                "ventaGravada": 9.0,
+                "tributos": null,
+                "psv": 0.0,
+                "noGravado": 0.0,
+                "ivaItem": 1.0354
+                }
+            ],
+            "resumen": {
+                "totalNoSuj": 0.0,
+                "totalExenta": 0.0,
+                "totalGravada": 9.0,
+                "subTotalVentas": 9.0,
+                "descuNoSuj": 0.0,
+                "descuExenta": 0.0,
+                "descuGravada": 0.0,
+                "porcentajeDescuento": 0.0,
+                "totalDescu": 0.0,
+                "tributos": null,
+                "subTotal": 9.0,
+                "ivaRete1": 0.0,
+                "reteRenta": 0.0,
+                "montoTotalOperacion": 9.0,
+                "totalNoGravado": 0.0,
+                "totalPagar": 9.0,
+                "totalLetras": "NUEVE CON 00/100 DÓLARES",
+                "totalIva": 1.04,
+                "saldoFavor": 0.0,
+                "condicionOperacion": 1,
+                "pagos": null,
+                "numPagoElectronico": null
+            },
+            "otrosDocumentos": null,
+            "extension": {
+                "nombEntrega": null,
+                "docuEntrega": null,
+                "nombRecibe": null,
+                "docuRecibe": null,
+                "observaciones": null,
+                "placaVehiculo": null
+            },
+            "apendice": null
+            }
+}
+
+
+RESPUESTA
+{
+    "status": "OK",
+    "body": "eyJhbGciOiJSUzUxMiJ9.ewogICJpZGVudGlmaWNhY2lvbiIgOiB7CiAgICAidmVyc2lvbiIgOiAxLAogICAgImFtYmllbnRlIiA6ICIwMCIsCiAgICAidGlwb0R0ZSIgOiAiMDEiLAogICAgIm51bWVyb0NvbnRyb2wiIDogIkRURS0wMS1NMDAxUDAwMS0wMDAwMDAwMDAwMDAwMDIiLAogICAgImNvZGlnb0dlbmVyYWNpb24iIDogIkM4Mjc5MTdELTM5NTktNEM5Qi1CNDk0LUQ3MkI0N0MyNDlDMyIsCiAgICAidGlwb01vZGVsbyIgOiAxLAogICAgInRpcG9PcGVyYWNpb24iIDogMSwKICAgICJ0aXBvQ29udGluZ2VuY2lhIiA6IG51bGwsCiAgICAibW90aXZvQ29udGluIiA6IG51bGwsCiAgICAiZmVjRW1pIiA6ICIyMDI1LTA0LTEzIiwKICAgICJob3JFbWkiIDogIjE3OjIxOjAwIiwKICAgICJ0aXBvTW9uZWRhIiA6ICJVU0QiCiAgfSwKICAiZW1pc29yIiA6IHsKICAgICJuaXQiIDogIjA2MTQwOTEyMjAxMDU2IiwKICAgICJucmMiIDogIjI5NzI2MjAiLAogICAgIm5vbWJyZSIgOiAiQUNDRVNPUklPUyBMRU8sIFNPQ0lFREFEIEFOT05JTUEgREUgQ0FQSVRBTCBWQVJJQUJMRSIsCiAgICAiY29kQWN0aXZpZGFkIiA6ICI0NjQ5NyIsCiAgICAiZGVzY0FjdGl2aWRhZCIgOiAiVmVudGEgZGUgYXJ0w61jdWxvcyBkZXBvcnRpdm9zLCBqdWd1ZXRlcyB5IHJvZGFkb3MiLAogICAgIm5vbWJyZUNvbWVyY2lhbCIgOiAiQUNDRVNPUklPUyBMRU8sIFNPQ0lFREFEIEFOT05JTUEgREUgQ0FQSVRBTCBWQVJJQUJMRSIsCiAgICAidGlwb0VzdGFibGVjaW1pZW50byIgOiAiMDIiLAogICAgImRpcmVjY2lvbiIgOiB7CiAgICAgICJkZXBhcnRhbWVudG8iIDogIjA1IiwKICAgICAgIm11bmljaXBpbyIgOiAiMjgiLAogICAgICAiY29tcGxlbWVudG8iIDogIkNhbGxlIGNoaWx0aXVwYW4sIGxvY2FsIDEsIHVyYi4gamFyZGluZXMgZGVsIHZvbGNhbiwgIzQsIG11bmljaXBpbyBkZSBzYW50YSB0ZWNsYSwgZGVwYXJ0YW1lbnRvIGRlIGxhIGxpYmVydGFkIgogICAgfSwKICAgICJ0ZWxlZm9ubyIgOiAiNzY3NzYxMjMiLAogICAgImNvcnJlbyIgOiAic2lndWVuemFhbGZyZWRAZ21haWwuY29tIiwKICAgICJjb2RFc3RhYmxlTUgiIDogIlMwMDEiLAogICAgImNvZEVzdGFibGUiIDogbnVsbCwKICAgICJjb2RQdW50b1ZlbnRhTUgiIDogIlAwMDEiLAogICAgImNvZFB1bnRvVmVudGEiIDogbnVsbAogIH0sCiAgInJlY2VwdG9yIiA6IHsKICAgICJ0aXBvRG9jdW1lbnRvIiA6IG51bGwsCiAgICAibnVtRG9jdW1lbnRvIiA6IG51bGwsCiAgICAibnJjIiA6IG51bGwsCiAgICAibm9tYnJlIiA6ICJKaG9ueSAgU3RhbmxleSBPc29ydG8iLAogICAgImNvZEFjdGl2aWRhZCIgOiBudWxsLAogICAgImRlc2NBY3RpdmlkYWQiIDogbnVsbCwKICAgICJkaXJlY2Npb24iIDogewogICAgICAiZGVwYXJ0YW1lbnRvIiA6ICIwNiIsCiAgICAgICJtdW5pY2lwaW8iIDogIjIzIiwKICAgICAgImNvbXBsZW1lbnRvIiA6ICItIgogICAgfSwKICAgICJ0ZWxlZm9ubyIgOiAiNzY3NzYxMjMiLAogICAgImNvcnJlbyIgOiAic2lndWVuemFhbGZyZWRAZ21haWwuY29tIgogIH0sCiAgImRvY3VtZW50b1JlbGFjaW9uYWRvIiA6IG51bGwsCiAgInZlbnRhVGVyY2VybyIgOiBudWxsLAogICJjdWVycG9Eb2N1bWVudG8iIDogWyB7CiAgICAibnVtSXRlbSIgOiAxLAogICAgInRpcG9JdGVtIiA6IDIsCiAgICAibnVtZXJvRG9jdW1lbnRvIiA6IG51bGwsCiAgICAiY2FudGlkYWQiIDogMS4wLAogICAgImNvZGlnbyIgOiAiWktHNjE2IiwKICAgICJjb2RUcmlidXRvIiA6IG51bGwsCiAgICAidW5pTWVkaWRhIiA6IDU5LAogICAgImRlc2NyaXBjaW9uIiA6ICJDQU5HVVJFUkEgTUFSSUNPTkVSQSBLSEFLSSIsCiAgICAicHJlY2lvVW5pIiA6IDkuMCwKICAgICJtb250b0Rlc2N1IiA6IDAuMCwKICAgICJ2ZW50YU5vU3VqIiA6IDAuMCwKICAgICJ2ZW50YUV4ZW50YSIgOiAwLjAsCiAgICAidmVudGFHcmF2YWRhIiA6IDkuMCwKICAgICJ0cmlidXRvcyIgOiBudWxsLAogICAgInBzdiIgOiAwLjAsCiAgICAibm9HcmF2YWRvIiA6IDAuMCwKICAgICJpdmFJdGVtIiA6IDEuMDM1NAogIH0gXSwKICAicmVzdW1lbiIgOiB7CiAgICAidG90YWxOb1N1aiIgOiAwLjAsCiAgICAidG90YWxFeGVudGEiIDogMC4wLAogICAgInRvdGFsR3JhdmFkYSIgOiA5LjAsCiAgICAic3ViVG90YWxWZW50YXMiIDogOS4wLAogICAgImRlc2N1Tm9TdWoiIDogMC4wLAogICAgImRlc2N1RXhlbnRhIiA6IDAuMCwKICAgICJkZXNjdUdyYXZhZGEiIDogMC4wLAogICAgInBvcmNlbnRhamVEZXNjdWVudG8iIDogMC4wLAogICAgInRvdGFsRGVzY3UiIDogMC4wLAogICAgInRyaWJ1dG9zIiA6IG51bGwsCiAgICAic3ViVG90YWwiIDogOS4wLAogICAgIml2YVJldGUxIiA6IDAuMCwKICAgICJyZXRlUmVudGEiIDogMC4wLAogICAgIm1vbnRvVG90YWxPcGVyYWNpb24iIDogOS4wLAogICAgInRvdGFsTm9HcmF2YWRvIiA6IDAuMCwKICAgICJ0b3RhbFBhZ2FyIiA6IDkuMCwKICAgICJ0b3RhbExldHJhcyIgOiAiTlVFVkUgQ09OIDAwLzEwMCBEw5NMQVJFUyIsCiAgICAidG90YWxJdmEiIDogMS4wNCwKICAgICJzYWxkb0Zhdm9yIiA6IDAuMCwKICAgICJjb25kaWNpb25PcGVyYWNpb24iIDogMSwKICAgICJwYWdvcyIgOiBudWxsLAogICAgIm51bVBhZ29FbGVjdHJvbmljbyIgOiBudWxsCiAgfSwKICAib3Ryb3NEb2N1bWVudG9zIiA6IG51bGwsCiAgImV4dGVuc2lvbiIgOiB7CiAgICAibm9tYkVudHJlZ2EiIDogbnVsbCwKICAgICJkb2N1RW50cmVnYSIgOiBudWxsLAogICAgIm5vbWJSZWNpYmUiIDogbnVsbCwKICAgICJkb2N1UmVjaWJlIiA6IG51bGwsCiAgICAib2JzZXJ2YWNpb25lcyIgOiBudWxsLAogICAgInBsYWNhVmVoaWN1bG8iIDogbnVsbAogIH0sCiAgImFwZW5kaWNlIiA6IG51bGwKfQ.C2TFSKn90CLlHXQWxekkFAtkfvNe2O--b-pxSKwotl9kmV0WAbPhyqv2OpkJmtrPaZdFDh-79a-5_FDWwPx3ngeWSBojK7hvLz_i-Wyw7jODwgaRkqWB7eDuPzkPWx6WTDtDhhjwz9SVX6VcfjELuumGdQln9C1_b_VxWlRyrWamo8T7vwzSI6W5QOFS3PdKs5JZXj32LN9PH-SrntvfHh6C7wkt8uKwGwp8GQPea7TeX7-AzwuVJ0D8ZuWYWZB-KBaA5H23hM0tmkYOikzX9poNOUB00Im2CWeZHQz-7pu2f-7GCWl2D_nCZS7-1Ah_Ey6DE1YPiHDMKu8c5jB8VQ"
+}

@@ -99,4 +99,9 @@ public class FirmarDocumentoController extends Controller {
 	public String getPrueba(){
 		return "aplicacion compilada correctamente";
 	}
+
+	@GetMapping("/spring_exito")
+	public String getMensajeExito(){
+		return "se subio con exito el proyecto spring con ajuste en la clase CertificadoBusiness el dia 2025-06-14 a las 18:30pm";
+	}
 }
